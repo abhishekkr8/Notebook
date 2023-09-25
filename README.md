@@ -1,10 +1,10 @@
-# iNotebook
+# Notekeep
 
-iNotebook is a sleek and user-friendly web application built on the MongoDB, Express, React, and Node (MERN) stack. It is designed to simplify and enhance your note-taking experience.
+Notekeep is a sleek and user-friendly web application built on the MongoDB, Express, React, and Node (MERN) stack. It is designed to simplify and enhance your note-taking experience.
 
 ## Features
 
-- **User Authentication**: Securely sign up and log in to your personalized iNotebook account.
+- **User Authentication**: Securely sign up and log in to your personalized Notekeep account.
 - **Create Notes**: Easily create new notes with titles, descriptions, and tags.
 - **Edit Notes**: Effortlessly edit existing notes to keep your information up-to-date.
 - **Delete Notes**: Delete unwanted or outdated notes for better organization.
@@ -60,12 +60,12 @@ iNotebook is a sleek and user-friendly web application built on the MongoDB, Exp
 ## Usage
 
 1. Open your web browser and go to `http://localhost:3000`.
-2. Sign up or log in to your iNotebook account.
+2. Sign up or log in to your Notekeep account.
 3. Start creating, editing, and organizing your notes.
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to iNotebook, please follow these steps:
+Contributions are welcome! If you'd like to contribute to Notekeep, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your feature: `git checkout -b feature-name`.
@@ -79,4 +79,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Happy note-taking with iNotebook! If you have any questions or feedback, feel free to [open an issue](https://github.com/aryankanwar/Notekeep/issues).
+Happy note-taking with Notekeep! If you have any questions or feedback, feel free to [open an issue](https://github.com/aryankanwar/Notekeep/issues).
