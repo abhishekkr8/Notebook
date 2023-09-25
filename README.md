@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# iNotebook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+iNotebook is a sleek and user-friendly web application built on the MongoDB, Express, React, and Node (MERN) stack. It is designed to simplify and enhance your note-taking experience.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Authentication**: Securely sign up and log in to your personalized iNotebook account.
+- **Create Notes**: Easily create new notes with titles, descriptions, and tags.
+- **Edit Notes**: Effortlessly edit existing notes to keep your information up-to-date.
+- **Delete Notes**: Delete unwanted or outdated notes for better organization.
+- **Tagging System**: Categorize your notes using tags for quick and easy retrieval.
+- **Intuitive User Interface**: The user-friendly interface ensures a seamless and enjoyable experience.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```bash
+   git clone https://github.com/aryankanwar/Notekeep.git
+   ```
 
-### `npm test`
+2. Navigate to the project directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   cd Notekeep
+   ```
 
-### `npm run build`
+3. Install dependencies for both the client and server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   cd client && npm install
+   cd ../server && npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Create a `.env` file in the `server` directory and add the following:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```env
+   MONGO_URI=<Your MongoDB URI>
+   JWT_SECRET=<Your JWT Secret>
+   ```
 
-### `npm run eject`
+   Replace `<Your MongoDB URI>` with your MongoDB connection string and `<Your JWT Secret>` with a secure string for JWT token generation.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Start the server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd server && npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   This will start the server on `http://localhost:5000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+6. Start the client (in a new terminal window):
 
-## Learn More
+   ```bash
+   cd client && npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   This will start the client on `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+1. Open your web browser and go to `http://localhost:3000`.
+2. Sign up or log in to your iNotebook account.
+3. Start creating, editing, and organizing your notes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Contributions are welcome! If you'd like to contribute to iNotebook, please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Fork the repository.
+2. Create a new branch for your feature: `git checkout -b feature-name`.
+3. Make your changes and commit them: `git commit -m 'Add some feature'`.
+4. Push to your branch: `git push origin feature-name`.
+5. Submit a pull request.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is licensed under the [MIT License](LICENSE).
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy note-taking with iNotebook! If you have any questions or feedback, feel free to [open an issue](https://github.com/aryankanwar/Notekeep/issues).
