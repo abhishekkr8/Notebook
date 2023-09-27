@@ -3,7 +3,7 @@ import noteContext from "../context/notes/noteContext";
 import Noteitem from './Noteitem';
 import AddNote from './AddNote';
 
-const Notes = () => {
+const Notes = (props) => {
     const context = useContext(noteContext);
     const { notes, getNotes, editNote } = context;
 
@@ -29,6 +29,7 @@ const Notes = () => {
     const handleClick = (e) => {
         editNote(note.id, note.etitle, note.edescription, note.etag);
         refClose.current.click();
+        props.showAlert("Updated successfully", "success");
     }
 
     const onChange = (e) => {
@@ -52,11 +53,15 @@ const Notes = () => {
                             <form className="my-3">
                                 <div className="mb-3">
                                     <label htmlFor="etitle" className="form-label">Title</label>
-                                    <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" onChange={onChange} />
+                                    <input type="text" className="form-control" id="etitle" name="etitle" 
+                                    value={note.etitle} aria-describedby="emailHelp" onChange={onChange} 
+                                    minLength={5} required/>
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="edescription" className="form-label">Description</label>
-                                    <input type="text" className="form-control" id="edescription" name="edescription" value={note.edescription} onChange={onChange} />
+                                    <input type="text" className="form-control" id="edescription" name="edescription" 
+                                    value={note.edescription} onChange={onChange} 
+                                    minLength={5} required/>
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="etag" className="form-label">Tag</label>
@@ -65,7 +70,9 @@ const Notes = () => {
                             </form>
                         </div>
                         <div className="modal-footer">
-                            <button ref={refClose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button 
+                            disabled={note.etitle.length < 5 || note.edescription.length < 5}
+                            ref={refClose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button onClick={handleClick} type="button" className="btn btn-primary">Update Note</button>
                         </div>
                     </div>
@@ -74,6 +81,9 @@ const Notes = () => {
 
             <div className="row my-3">
                 <h2>Your Notes</h2>
+                <div className ='container'>
+                {notes.length ==0 && "No notes to display"}
+                </div>
                 {notes.map((currentNote) => {
                     return <Noteitem key={currentNote._id} updateNote={updateNote} note={currentNote} />
                 })}
