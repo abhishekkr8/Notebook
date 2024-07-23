@@ -16,7 +16,7 @@ Notekeep is a sleek and user-friendly web application built on the MongoDB, Expr
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/aryankanwar/Notekeep.git
+   git clone https://github.com/abhishekkr8/Intership_project.git
    ```
 
 2. Navigate to the project directory:
@@ -78,5 +78,3 @@ Contributions are welcome! If you'd like to contribute to Notekeep, please follo
 This project is licensed under the [MIT License](LICENSE).
 
 ---
-
-Happy note-taking with Notekeep! If you have any questions or feedback, feel free to [open an issue](https://github.com/aryankanwar/Notekeep/issues).
